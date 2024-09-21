@@ -1,0 +1,23 @@
+
+public int bitwiseComplement(int n) {
+        int ans=0;
+        int base=1;
+      while(n>0){
+        int bit=n&1;
+        if(bit==1)bit=0;
+        else bit=1;
+        ans+=(bit*base);
+        n=n>>1;
+        base*=10;
+      }  
+      int digit,ans2;
+      digit=1;
+      ans2=0;
+      while(ans>0){
+        int rem=ans%10;
+        ans2+=(rem*digit);
+        ans/=10;
+        digit*=2;
+      }
+     return ans2 ;
+    }
