@@ -1,3 +1,25 @@
+// best solution
+class Solution {
+    public int bitwiseComplement(int n) {
+        if(n==0)return 1;
+        int bit;
+        int complement=0;
+        int base2=1;
+        while(n>0){
+           bit=n%2;
+            if(bit==0)bit=1;
+            else bit=0;
+            complement+=bit*base2;
+            n/=2;
+            base2*=2;
+        }
+            return complement;
+        
+    }
+}
+
+
+// aternative way
 
 public int bitwiseComplement(int n) {
         int ans=0;
