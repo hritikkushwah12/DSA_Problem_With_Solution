@@ -15,7 +15,7 @@ import java.util.Scanner;
                 base*=10;
             }
             System.out.println(ans);
-            System.out.println(~5);
+            System.out.println(~5+1);
 
 // ALTERNATIVE WAY !
 //            int rem;
