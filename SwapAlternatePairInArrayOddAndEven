@@ -1,0 +1,31 @@
+package com.problem.array;
+import java.util.*;
+public class SwapAlternatePairInArrayOddAndEven {
+        public static int [] alter(int []ar) {
+            for (int i = 0; i < ar.length;i=i+2) {
+                // if (i == (ar.length - 1)) break;
+                if(i+1<ar.length) {
+                    int temp = ar[i];
+                    ar[i] = ar[i + 1];
+                    ar[i + 1] = temp;
+                }
+            }
+            return ar;
+        }
+    public static void printArray(int []ar){
+        for(int i=0;i<ar.length;i++){
+            System.out.print(ar[i]+" ");
+        }
+        System.out.println();
+    }
+        public static void main(String []args){
+            Scanner sc=new Scanner(System.in);
+            int []ar={5,2,9,4,7,6,1,0};
+            int []ar2={11,33,9,76,43};
+            alter(ar);
+            printArray(ar);
+            alter(ar2);
+            printArray(ar2);
+        }
+    }
+
