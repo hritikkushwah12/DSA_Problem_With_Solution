@@ -1,0 +1,19 @@
+public class FirstUniqueInArray {
+
+/* BUT THIS IS ONLY VALID FOR FINDING UNIQUE IN ONLY ONE PAIR OF DUPLICATES with must single unique in  ARRAY! */
+
+public static int FindUnique(int []ar){
+        int ans=0;
+        for(int i=0;i<ar.length;i++){
+            ans=ans^ar[i];
+        }
+        return ans;
+    }
+    public static void main(String []args){
+        int [] arr={2,3,4,3,1,2,1};
+        System.out.println(FindUnique(arr));
+        int [] ar={8,96,8,2,2,288,2,96};
+        System.out.println(FindUnique(ar));
+        System.out.println(288^2);
+    }
+}
