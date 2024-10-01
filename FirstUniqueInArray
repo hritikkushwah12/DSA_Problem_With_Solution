@@ -1,0 +1,18 @@
+/* BELOW METHOD IS UNIVERSAL SOUTION FOR FINDING UNIQUE IN array! */
+public class FirstUniqueInArray {
+    public static int FindUnique(int []ar){
+
+       for(int i=0;i<ar.length;i++){
+           int count=0;
+           for(int j=0;j<ar.length;j++){
+               if (ar[i]==ar[j]) {
+                   count++;
+               }
+           }
+       if(count==1)return ar[i];
+
+
+       }
+
+        return 0;
+ }
