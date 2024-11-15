@@ -1,0 +1,24 @@
+public class rotateArrayByMe {
+    public static void main(String[] args) {
+        int []ar={1,2,3,4,5,6,7,8,9,10};
+        int []arc=new int[ar.length];
+        int k=100,j=0;
+        k=k%ar.length;
+//        if((k%(ar.length))!=0) {
+            for (int i = (ar.length) - k; i < ar.length; i++) {
+                arc[j++] = ar[i];
+            }
+            int l = 0;
+            for (; j < arc.length; j++) {
+                arc[j] = ar[l++];
+            }
+
+       // }
+        for (int i = 0; i < arc.length; i++) {
+                System.out.print(arc[i] + " ");
+            }
+        for (int i = 0; i < ar.length; i++) {
+            System.out.print(ar[i] + " ");
+       }
+    }
+}
